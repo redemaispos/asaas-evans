@@ -15,6 +15,7 @@ app.get("/", (req, res) => {
 
 app.post("/criar-pagamento", async (req, res) => {
   try {
+      console.log("BODY RECEBIDO:", JSON.stringify(req.body));
     const { nome, cpf, email, valor, curso } = req.body;
 
     const cpfLimpo = cpf.replace(/\D/g, "");
