@@ -64,7 +64,7 @@ if (!clienteId) {
     }
   }
 );
-
+console.log("PAGAMENTO CRIADO:", JSON.stringify(pagamento.data, null, 2));
 // BUSCA O PIX GERADO
 const pix = await axios.get(
   `${API_URL}/payments/${pagamento.data.id}/pixQrCode`,
